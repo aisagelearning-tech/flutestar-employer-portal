@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic[email]
+sqlalchemy
+alembic
+python-dotenv
+
+# PostgreSQL driver for production (DATABASE_URL=postgresql+psycopg2://...).
+# Harmless to install even when running against local SQLite in development.
+psycopg2-binary
+

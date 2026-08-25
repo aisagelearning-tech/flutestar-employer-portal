@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FLUTESTAR Employer Portal</title>
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+</head>
+<body>
+<header><div class="brand"><b>FLUTE<span>STAR</span></b><small>TRAINING & CONSULTANCY SERVICES LLP</small></div><a href="mailto:info@flute-star.com">Need help?</a></header>
+<main>
+<section class="hero">
+<div class="intro"><p class="eyebrow">EMPLOYER PORTAL</p><h1>Right Talent. <em>Right Skills.</em> Right Fit.</h1>
+<p>Connect with suitable candidates, interns, apprentices and skilled professionals, or engage FLUTESTAR for project-based engineering consultancy.</p>
+<div class="pills"><span>Full-Time</span><span>Part-Time</span><span>Contractual</span><span>Internship</span><span>Apprenticeship</span><span>Consultancy</span></div></div>
+<div class="flow"><h2>Employer Engagement Flow</h2>
+<ol><li>Employer Registration / Login</li><li>Post Your Requirement</li><li>FLUTESTAR Review & Matching</li><li>Employer Shortlist & Interview</li><li>Selection / Project Engagement</li><li>Agreement & Commercial Engagement</li><li>Closure & Feedback</li></ol></div>
+</section>
+
+<section class="card">
+<div class="tabs"><button class="active" data-tab="login">Existing Employer — Login</button><button data-tab="register">New Employer — Register</button></div>
+<div id="login" class="panel active"><h2>Employer Login</h2><p>V1: login looks up your account by business email. Full password authentication is a planned production upgrade — see project docs.</p>
+<form id="loginForm"><label>Business Email<input name="email" type="email" required placeholder="hr@company.com"></label><label>Password<input type="password" placeholder="(not yet enforced in V1)"></label><button>Login</button></form><div id="loginMsg" class="form-msg"></div></div>
+<div id="register" class="panel"><h2>Create Employer Account</h2><p>Register your organization for recruitment, staffing, internship, apprenticeship or consultancy services.</p>
+<form id="registerForm"><div class="grid"><label>Organization / Company<input name="company" required></label><label>Contact Person<input name="contact" required></label><label>Business Email<input name="email" type="email" required></label><label>Contact Number<input name="phone" type="tel" required></label><label>Company Website<input name="website" type="url" placeholder="https://"></label><label>City / Location<input name="location" required></label></div>
+<label>Organization Type<select name="type" required><option value="">Select</option><option>Private Company</option><option>Startup</option><option>Government / Public Organization</option><option>Educational / Research Organization</option><option>Consultancy / Engineering Firm</option><option>Other</option></select></label>
+<label>Brief Organization Description<textarea name="description" rows="4"></textarea></label>
+<label class="check"><input type="checkbox" required> I confirm that the information is accurate and agree to be contacted by FLUTESTAR.</label>
+<button>Create Employer Registration</button></form><div id="registerMsg" class="form-msg"></div></div>
+</section>
+
+<section id="myRequirements" class="card" hidden>
+<div class="myreq-head">
+<div><h2>My Requirements</h2><p data-employer-id-hint>Your Employer ID: —</p></div>
+<button id="logoutBtn" type="button" class="secondary-btn">Log out</button>
+</div>
+<div id="myRequirementsStatus" class="form-msg"></div>
+<ul id="myRequirementsList" class="req-list"></ul>
+</section>
+
+<section class="card">
+<h2>Post Your Requirement</h2><p>This V1 form is prepared for later connection to the operational backend / Google Sheets MVP.</p>
+<form id="reqForm"><div class="grid">
+<label>Requirement Type<select name="requirement" required><option value="">Select</option><option>Full-Time Employee</option><option>Part-Time Employee</option><option>Contractual Resource</option><option>Internship</option><option>Apprenticeship</option><option>Engineering Consultancy</option><option>Project / Task-Based Consultancy</option></select></label>
+<label>Role / Project Title<input name="role" required></label><label>Number Required<input name="count" type="number" min="1" value="1" required></label><label>Preferred Location<input name="location" required></label><label>Minimum Qualification<input name="qualification" required></label><label>Experience Required<input name="experience" required placeholder="0–2 years / 3+ years"></label></div>
+<h3>Requirement Timeline</h3>
+<div class="grid">
+<label>Requirement Priority<select name="priority" required><option value="">Select</option><option>Urgent / Immediate</option><option>High Priority</option><option>Normal</option><option>Planned / Future Requirement</option></select></label>
+<label>Required Within<select name="requiredWithin" required><option value="">Select</option><option>Immediately / Within 15 days</option><option>Within 1 month</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months / Future Planning</option><option>Flexible / To be discussed</option></select></label>
+<label>Preferred Start / Joining Date<input name="startDate" type="date"></label>
+<label>Expected Engagement Duration<select name="duration"><option value="">Select / Not Applicable</option><option>Permanent</option><option>Less than 1 month</option><option>1–3 months</option><option>3–6 months</option><option>6–12 months</option><option>More than 1 year</option><option>Project duration</option><option>To be discussed</option></select></label>
+<label class="target-date">Target Completion Date<input name="targetDate" type="date"></label>
+<label>Budget / Commercial Range<input name="budget" placeholder="Optional"></label>
+</div>
+<label>Key Skills / Technologies<textarea name="skills" rows="3" required placeholder="e.g. Python, FPGA, Verilog, embedded Linux"></textarea></label>
+<label>Requirement Details<textarea name="details" rows="5" required></textarea></label>
+<button>Submit Requirement</button><div id="reqMsg" class="form-msg"></div></form>
+</section>
+
+<section class="contact"><b>Immediate requirements:</b> +91-8830870946 / +91-9767690413 &nbsp; | &nbsp; <b>Portal:</b> https://employer.flute-star.com &nbsp; | &nbsp; Nagpur • Pune • Mumbai • Noida • Bangalore • Hyderabad • India</section>
+</main>
+<footer>© FLUTESTAR Training & Consultancy Services LLP — V1 Employer Portal Prototype</footer>
+<script src="app.js"></script>
+</body></html>
